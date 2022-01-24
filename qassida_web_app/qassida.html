@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Projet 2CS FASI</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+      <link rel="stylesheet" href="scribbler-global.css">
+      <link rel="stylesheet" href="scribbler-landing.css">
+
+      <style type="text/css">
+        .form-style-5{
+            max-width: 500px;
+            padding: 10px 20px;
+            background: #f4f7f8;
+            margin: 10px auto;
+            padding: 20px;
+            background: #f4f7f8;
+            border-radius: 8px;
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+        .form-style-5 fieldset{
+            border: none;
+        }
+        .form-style-5 legend {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+        .form-style-5 label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .form-style-5 input[type="text"],
+        .form-style-5 input[type="date"],
+        .form-style-5 input[type="datetime"],
+        .form-style-5 input[type="email"],
+        .form-style-5 input[type="number"],
+        .form-style-5 input[type="search"],
+        .form-style-5 input[type="time"],
+        .form-style-5 input[type="url"],
+        .form-style-5 textarea,
+        .form-style-5 select {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            background: rgba(255,255,255,.1);
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            margin: 0;
+            outline: 0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box; 
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box; 
+            background-color: #e8eeef;
+            color:#8a97a0;
+            -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+            box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+            margin-bottom: 30px;
+        }
+        .form-style-5 input[type="text"]:focus,
+        .form-style-5 input[type="date"]:focus,
+        .form-style-5 input[type="datetime"]:focus,
+        .form-style-5 input[type="email"]:focus,
+        .form-style-5 input[type="number"]:focus,
+        .form-style-5 input[type="search"]:focus,
+        .form-style-5 input[type="time"]:focus,
+        .form-style-5 input[type="url"]:focus,
+        .form-style-5 textarea:focus,
+        .form-style-5 select:focus{
+            background: #d2d9dd;
+        }
+        .form-style-5 select{
+            -webkit-appearance: menulist-button;
+            height:35px;
+        }
+        .form-style-5 .number {
+            background: #FE6A6B;
+            color: #fff;
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            font-size: 0.8em;
+            margin-right: 4px;
+            line-height: 30px;
+            text-align: center;
+            text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+            border-radius: 15px 15px 15px 0px;
+        }
+        
+        .form-style-5 input[type="submit"],
+        .form-style-5 input[type="button"]
+        {
+            position: relative;
+            display: block;
+            padding: 19px 39px 18px 39px;
+            color: #FFF;
+            margin: 0 auto;
+            background: #FE6A6B;
+            font-size: 18px;
+            text-align: center;
+            font-style: normal;
+            width: 100%;
+            border: 1px solid #FE6A6B;
+            border-width: 1px 1px 3px;
+            margin-bottom: 10px;
+        }
+        .form-style-5 input[type="submit"]:hover,
+        .form-style-5 input[type="button"]:hover
+        {
+            background: #FE6A6B;
+        }
+        </style>
+
+
+      <link rel="author" href="humans.txt">
+  </head>
+  <body>
+    <nav>
+      <div class="logo"></div>
+      <ul class="menu">
+        <div class="menu__item toggle"><span></span></div>
+        <li class="menu__item"><a href="doc.html" class="link link--dark"><i class="fa fa-book"></i> Documentation</a></li>
+        <li class="menu__item"><a href="https://github.com/Lynda-Starkus/Qassida" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
+        <li class="menu__item"><a href="index.html" class="link link--dark"><i class="fa fa-home"></i> Home</a></li>
+
+    </ul>
+    </nav>
+    <div class="hero">
+      <h1 class="hero__title">Qassida</h1>
+      <p class="hero__description">Générateur de poèmes arabes avec Pytorch et LSTM</p>
+    </div>
+    <div class="wrapper">
+      <div class="installation">
+        <h3 class="section__title">Générez votre poème</h3>
+        
+      </div>
+      
+      <!-- mettre ici le générateur -->
+      <div class="form-style-5">
+        <form action="/" method="post">
+        <fieldset>
+        <legend><span class="number">1</span> Candidate Info</legend>
+        <input type="text" name="field1" placeholder="Le mot ou la phrase de début">
+        <label for="poet">Poète:</label>
+        <select id="poet" name="poet">
+        
+          <option value="0">Mahmoud Darwish</option>
+          <option value="1">Ahmed Shawqi</option>
+          <option value="2">Elia Abu Madi</option>
+          <option value="3">Mutanabi</option>
+          <option value="4">Albohtry</option>
+          <option value="5">Abu Nawas</option>
+        
+        </select>      
+        </fieldset>
+        <input type="submit" value="Générer"/>
+        </form>
+        <embed src="poem_generated.txt">
+        </div>
+
+        
+
+    </div>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="scribbler.js"></script>
+  </body>
+</html>

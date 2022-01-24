@@ -5,7 +5,23 @@ import string
 import sys
 import argparse
 
-File = 'Elia_Abu_Madi_Poems.txt'
+parser = argparse.ArgumentParser(description='Scrape an arabic poet\'s work !')
+parser.add_argument('--poet', type=int,
+                    default=0,
+                    help='choosing the number of the poet')
+
+args = parser.parse_args()
+
+print(args.poet)
+
+
+poet_number = args.poet
+
+poets = ['mahmoud-darwish' ,'ahmed-shawqi', 'elia-abu-madi', 'Mutanabi', 'albohtry', 'abu-nawas']
+
+print(poets[poet_number])
+File = poets[poet_number]+".txt"
+
 
 f = open(File, 'w+', encoding="utf-8")
 
@@ -22,7 +38,8 @@ def ScrapePoems (URL):
         f.write(poem.text.strip()+'\n')
 
 BaseURL = "https://www.aldiwan.net/"
-AuthURL = "https://www.aldiwan.net/cat-poet-elia-abu-madi"
+AuthURL = "https://www.aldiwan.net/cat-poet-"+poets[poet_number]
+print(AuthURL)
 page = requests.get(AuthURL)
 soup = BeautifulSoup(page.content, "html.parser")
 allTab = soup.find_all("div", class_="record col-12")
@@ -80,7 +97,7 @@ def preprocess(text):
 
 f = open(File, 'r', encoding="utf-8")
 dataset = f.read()
-cleaned = open('CleanPoems.txt', 'w+',encoding="utf-8")
+cleaned = open(poets[poet_number]+'-clean.txt', 'w+',encoding="utf-8")
 cleaned.write(preprocess(dataset))
 f.close()
 cleaned.close()
