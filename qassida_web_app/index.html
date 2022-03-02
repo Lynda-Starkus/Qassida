@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Projet 2CS FASI</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+      <link rel="stylesheet" href="scribbler-global.css">
+      <link rel="stylesheet" href="scribbler-landing.css">
+      <link rel="author" href="humans.txt">
+  </head>
+  <body>
+    <nav>
+      <div class="logo"></div>
+      <ul class="menu">
+        <div class="menu__item toggle"><span></span></div>
+        <li class="menu__item"><a href="doc.html" class="link link--dark"><i class="fa fa-book"></i> Documentation</a></li>
+        <li class="menu__item"><a href="https://github.com/Lynda-Starkus/Qassida" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1 class="hero__title">Qassida</h1>
+      <p class="hero__description">Générateur de poèmes arabes avec Pytorch</p>
+    </div>
+    <div class="hero__terminal">
+      <pre>
+        <!-- Code example -->
+        <code class="shell-session demo">Starkus ~ $ </code>
+      </pre>
+    </div>
+    <div class="wrapper">
+      <div class="installation">
+        <h3 class="section__title">Installation</h3>
+        <div class="tab__container">
+          <ul class="tab__menu">
+            <li class="tab active" data-tab="win">Windows</li>
+          </ul>
+          <pre class="nohighlight code">
+            <code class="tab__pane active win">$  pip install -r requirements.txt</code>
+            <code class="tab__pane active win">$  python qassida.py -firstWord [premier mot du poème]</code>
+          </pre>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature__item">
+          <h3 class="section__title">C'est quoi ? </h3>
+          <p>Le code permet de générer des poèmes dans un style donné en utilsant des Réseaux de neurones récurrents (RNN)</p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">Livrables</h3>
+          <p>Le code peut etre importé et exécuté localement, où testé sur le site web</p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">Outils</h3>
+          <p>IDE + Python 3.x + Pytorch</p>
+        </div>
+        
+      </div>
+      <div class="keybinding">
+        <ul class="keybinding__detail">
+          <h3 class="keybinding__title">Encadreur</h3>
+          <li>Ait Ali Yahia Yacine <span class="keybinding__label">ESI-Alger</span></li>
+        </ul>
+        <ul class="keybinding__detail">
+          <h3 class="keybinding__title">Membres de l'équipe</h3>
+          <li><span class="keybinding__label">ESI-Alger</span> <a href="https://www.linkedin.com/in/melissa-tessa-5a838a1b1/"> Tessa Mélissa </a></li>
+          <li><span class="keybinding__label">ESI-Alger</span> <a href="https://www.linkedin.com/in/linda-belkessa"> Belkessa Linda </a> </li>
+          <li><span class="keybinding__label">ESI-Alger</span> <a href="https://www.linkedin.com/in/wilem-lamdani-55645a217/"> Lamdani Wilem </a></li>
+          <li><span class="keybinding__label">ESI-Alger</span> <a href=""> Miloudi Mohamed Zakaria </a></li>
+        </ul>
+      </div>
+      <div class="callout">
+        <p>Vous pouvez consulter la documentation et le rapport de ce projet</p>
+        <a href="doc.html" class="button--primary">Documentation</a>
+      </div>
+    </div>
+    <div class="changelog">
+      <div class="wrapper">
+        <h3 class="section__title">Plan de travail</h3>
+        <div class="changelog__item">
+          <div class="changelog__meta">
+            <h4 class="changelog__title">1</h4>
+          </div>
+          <div class="changelog__detail">
+            <ul>
+              <li>Phase de documentation</li>
+              <li>Réunion de lancement</li>
+              <li>Phase de compréhension et apprentissage de tensorflow et RNN</li>
+            </ul>
+          </div>
+        </div>
+        <div class="changelog__item">
+          <div class="changelog__meta">
+            <h4 class="changelog__title">2</h4>
+          </div>
+          <div class="changelog__detail">
+            <ul>
+              <li>Phase rédaction du rapport</li>
+              <li>Réunion de travail</li>
+            </ul>
+          </div>
+        </div>
+        <div class="changelog__item">
+          <div class="changelog__meta">
+            <h4 class="changelog__title">3</h4>
+          </div>
+          <div class="changelog__detail">
+            <ul>
+              <li>Création du site web et finalisation du rapport</li>
+              <li>Phase implémentation pour la poèsie arabe avec Pytorch</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">License MIT <a href="https://www.esi.dz/" target="_blank" class="link link--light">Ecole Nationale Supérieure d'Inforamtique (ESI ex. INI)</a>.</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="scribbler.js"></script>
+  </body>
+</html>
